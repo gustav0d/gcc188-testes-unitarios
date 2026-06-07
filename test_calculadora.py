@@ -58,6 +58,19 @@ class TestCalculadora(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             dividir(5, 0)
 
+    def test_dividir_cenarios_ia(self):
+        """Cenários gerados com IA para cobrir casos de fronteira e combinações menos óbvias."""
+        casos = [
+            (9, 1, 9.0),      # dividir por 1 retorna o proprio valor
+            (9, -1, -9.0),    # dividir por -1 inverte o sinal
+            (-6, -2, 3.0),    # dois negativos resultam em positivo
+            (1.5, 0.5, 3.0),  # divisao entre floats
+            (1_000_000, 1_000, 1_000.0),  # numeros grandes
+        ]
+        for a, b, esperado in casos:
+            with self.subTest(a=a, b=b):
+                self.assertAlmostEqual(dividir(a, b), esperado)
+
     def test_potencia(self):
         """Testa potenciação com expoente positivo, zero e negativo."""
         casos = [
