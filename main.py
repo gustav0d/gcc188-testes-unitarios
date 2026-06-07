@@ -1,4 +1,4 @@
-from calculadora import somar, subtrair, multiplicar, dividir, potencia, calcular_media
+from calculadora import calcular_media, dividir, multiplicar, potencia, somar, subtrair
 
 OPCOES = {
     "1": ("Somar", somar),

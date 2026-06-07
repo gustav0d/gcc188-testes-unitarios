@@ -99,8 +99,12 @@ OK
 
 ```
 /
+├── instrucoes/
+│   ├── TesteUnitario-1.md
+│   └── Teste-Unitario-IA.md
 ├── calculadora.py       # funções matemáticas
 ├── test_calculadora.py  # testes unitários
 ├── main.py              # interface interativa no terminal
+├── .mise.toml
 └── README.md
 ```
